@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WA Scheduler & Reminder</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>WA Scheduler</h1>
+      <p class="subtitle">Schedule messages & reminders</p>
+    </header>
+
+    <main>
+      <div class="form-section">
+        <label for="messageText">Message:</label>
+        <textarea 
+          id="messageText" 
+          placeholder="Type your message or reminder here..."
+          rows="4"
+        ></textarea>
+      </div>
+
+      <div class="form-section">
+        <label for="scheduledDateTime">Date & Time:</label>
+        <input 
+          type="datetime-local" 
+          id="scheduledDateTime"
+          required
+        >
+      </div>
+
+      <div class="form-section" id="chatSelectionSection">
+        <label for="targetChat">Send to (Optional - Phone Number):</label>
+        <input 
+          type="text" 
+          id="targetChat"
+          placeholder="e.g., 1234567890 (with country code)"
+        >
+        <small class="help-text">Leave empty to send to currently open chat</small>
+      </div>
+
+      <div class="form-section">
+        <label class="checkbox-label">
+          <input type="checkbox" id="isReminder">
+          <span>This is a reminder (notification only, won't send message)</span>
+        </label>
+      </div>
+
+      <div class="button-group">
+        <button id="scheduleBtn" class="btn btn-primary">Schedule</button>
+        <button id="testSendBtn" class="btn btn-secondary" style="margin-top: 8px;">Test Send Now (to current chat)</button>
+      </div>
+
+      <div id="statusMessage" class="status-message"></div>
+
+      <div class="divider"></div>
+
+      <div class="view-section">
+        <button id="viewScheduledBtn" class="btn btn-secondary">View Scheduled</button>
+      </div>
+
+      <div id="scheduledList" class="scheduled-list"></div>
+    </main>
+  </div>
+
+  <script src="../utils/scheduler.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
+

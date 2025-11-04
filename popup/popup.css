@@ -1,0 +1,280 @@
+/* WA Scheduler & Reminder - Popup Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  width: 400px;
+  min-height: 300px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.container {
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+header h1 {
+  font-size: 24px;
+  color: #25d366;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: #667781;
+  font-weight: 400;
+}
+
+.form-section {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #54656f;
+  margin-bottom: 6px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #e9edef;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #25d366;
+}
+
+input[type="datetime-local"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #e9edef;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+input[type="datetime-local"]:focus {
+  outline: none;
+  border-color: #25d366;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 12px;
+  color: #54656f;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #25d366;
+}
+
+.button-group {
+  margin: 20px 0;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #25d366 0%, #20ba5a 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-primary:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-secondary {
+  background: white;
+  color: #25d366;
+  border: 2px solid #25d366;
+}
+
+.btn-secondary:hover {
+  background: #f0fdf4;
+}
+
+.status-message {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  text-align: center;
+  min-height: 20px;
+  transition: all 0.3s;
+}
+
+.status-message.success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.status-message.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.status-message.info {
+  background: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}
+
+.divider {
+  height: 1px;
+  background: #e9edef;
+  margin: 20px 0;
+}
+
+.view-section {
+  margin-bottom: 16px;
+}
+
+.scheduled-list {
+  margin-top: 16px;
+}
+
+.scheduled-item {
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #e9edef;
+  font-size: 12px;
+}
+
+.scheduled-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.scheduled-item-type {
+  font-weight: 600;
+  color: #25d366;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.scheduled-item-time {
+  color: #667781;
+  font-size: 11px;
+}
+
+.scheduled-item-text {
+  color: #54656f;
+  margin: 8px 0;
+  word-wrap: break-word;
+}
+
+.scheduled-item-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.btn-small {
+  padding: 4px 8px;
+  font-size: 11px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-delete {
+  background: #fee;
+  color: #d32f2f;
+}
+
+.btn-delete:hover {
+  background: #fdd;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 20px;
+  color: #667781;
+  font-size: 13px;
+}
+
+.help-text {
+  display: block;
+  font-size: 11px;
+  color: #8696a0;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+.type-badge {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-right: 6px;
+}
+
+.type-message {
+  background: #25d366;
+  color: white;
+}
+
+.type-reminder {
+  background: #667781;
+  color: white;
+}
+
